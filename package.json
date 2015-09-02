@@ -1,0 +1,30 @@
+{
+  "name": "prismjs-loader",
+  "version": "0.0.1",
+  "description": "prismjs webpack loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valor-software/prismjs-loader.git"
+  },
+  "keywords": [
+    "prism.js",
+    "prismjs",
+    "webpack",
+    "loader",
+    "prismjs-loader"
+  ],
+  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valor-software/prismjs-loader/issues"
+  },
+  "homepage": "https://github.com/valor-software/prismjs-loader#readme",
+  "dependencies": {
+    "loader-utils": "^0.2.11",
+    "prismjs": "valorkin/prism"
+  }
+}
