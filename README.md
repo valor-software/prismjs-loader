@@ -1,5 +1,5 @@
-# prismjs loader for webpack
-prismjs-loader for webpack, http://prismjs.com/
+# prismjs-loader for webpack
+prismjs-loader for webpack, [http://prismjs.com/](http://prismjs.com/)
 
 # Important!
 
@@ -9,6 +9,7 @@ While [https://github.com/PrismJS/prism/pull/754](https://github.com/PrismJS/pri
 # Installation
 
 ```bash
+npm install -D valorkin\prism
 npm install -D prismjs-loader
 ```
 
