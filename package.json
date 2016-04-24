@@ -25,6 +25,6 @@
   "homepage": "https://github.com/valor-software/prismjs-loader#readme",
   "dependencies": {
     "loader-utils": "^0.2.11",
-    "prismjs": "valorkin/prism"
+    "prismjs": "^1.4.1"
   }
 }
