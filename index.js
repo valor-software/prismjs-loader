@@ -1,11 +1,9 @@
 'use strict';
-// todo: add support for plugins if requested
-var Prism = require('prismjs');
-var loaderUtils = require('loader-utils');
+const Prism = require('prismjs');
+const loaderUtils = require('loader-utils');
 
-module.exports = function (content) {
-  this && this.cacheable && this.cacheable();
-  var query = loaderUtils.parseQuery(this.query);
+module.exports = function loader(content) {
+  const query = loaderUtils.parseQuery(this.query);
 
   if (!query.lang) {
     throw new Error('You need to provide `lang` query parameter');
@@ -13,12 +11,17 @@ module.exports = function (content) {
 
 
   if (!Prism.languages[query.lang]) {
-    // todo: add per module require, when prism will be published per component
-    require('prismjs/components/prism-'+ query.lang +'.js');
+    /* eslint-disable */
+    require(`prismjs/components/prism-${query.lang}.js`);
+    /* eslint-enable */
   }
 
-  var lang = Prism.languages[query.lang];
+  const lang = Prism.languages[query.lang];
+
   this.value = Prism.highlight(content, lang);
-  return 'module.exports = ' + JSON.stringify(this.value);
+  const str = JSON.stringify(this.value);
+
+  return `module.exports = ${str}`;
 };
+
 module.exports.seperable = true;

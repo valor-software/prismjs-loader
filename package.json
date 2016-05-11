@@ -4,7 +4,13 @@
   "description": "prismjs webpack loader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "flow.eslint": "./node_modules/.bin/eslint --ignore-path .gitignore  --ext js --fix . .config",
+    "flow.changelog": "./node_modules/.bin/conventional-changelog -i CHANGELOG.md -s -p angular -v",
+    "flow.github-release": "./node_modules/.bin/conventional-github-releaser -p angular",
+    "test": "npm run flow.eslint",
+    "preversion": "npm test",
+    "version": "npm run flow.changelog && git add -A",
+    "postversion": "git push origin master && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -24,7 +30,13 @@
   },
   "homepage": "https://github.com/valor-software/prismjs-loader#readme",
   "dependencies": {
-    "loader-utils": "^0.2.11",
-    "prismjs": "^1.4.1"
+    "loader-utils": "0.2.14",
+    "prismjs": "1.4.1"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "1.2.0",
+    "conventional-github-releaser": "1.1.2",
+    "eslint-config-valorsoft": "0.0.11",
+    "gh-pages": "0.11.0"
   }
 }
