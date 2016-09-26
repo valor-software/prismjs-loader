@@ -18,8 +18,8 @@ module.exports = function loader(content) {
 
   const lang = Prism.languages[query.lang];
 
-  this.value = Prism.highlight(content, lang);
-  const str = JSON.stringify(this.value);
+  const value = Prism.highlight(content, lang);
+  const str = JSON.stringify(value);
 
   return `module.exports = ${str}`;
 };
