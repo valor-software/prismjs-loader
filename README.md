@@ -1,4 +1,6 @@
 # prismjs-loader for webpack
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/valor-software/prismjs-loader.svg)](https://greenkeeper.io/)
 prismjs-loader for webpack, [http://prismjs.com/](http://prismjs.com/)
 
 # Installation
