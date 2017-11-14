@@ -3,7 +3,7 @@ const Prism = require('prismjs');
 const loaderUtils = require('loader-utils');
 
 module.exports = function loader(content) {
-  const query = loaderUtils.parseQuery(this.query);
+  const query = loaderUtils.getOptions(this);
 
   if (!query.lang) {
     throw new Error('You need to provide `lang` query parameter');
