@@ -1,5 +1,5 @@
 # prismjs-loader for webpack
-prismjs-loader for webpack, [http://prismjs.com/](http://prismjs.com/)
+prismjs-loader for webpack, [PrismJS](https://github.com/PrismJS/prism)
 
 # Installation
 
