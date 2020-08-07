@@ -31,7 +31,7 @@
   "homepage": "https://github.com/valor-software/prismjs-loader#readme",
   "dependencies": {
     "loader-utils": "0.2.14",
-    "prismjs": "1.4.1"
+    "prismjs": "1.21.0"
   },
   "devDependencies": {
     "conventional-changelog-cli": "1.2.0",
